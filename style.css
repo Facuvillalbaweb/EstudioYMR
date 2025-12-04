@@ -90,13 +90,28 @@ body {
     height: 90px;
     border: 2px solid var(--brand-gold);
     border-radius: 50%;
+    
+    /* Centrado */
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto 10px;
     background: var(--bg-white);
+    
     position: relative;
     z-index: 2;
+    
+    /* CAMBIO CLAVE: Esto asegura que la imagen no se salga del círculo */
+    overflow: hidden; 
+}
+
+/* Nueva clase para controlar tu imagen */
+.logo-img {
+    width: 100%;
+    height: 100%;
+    /* 'cover' recorta la imagen para llenar el circulo sin deformarla */
+    /* Si tu logo se corta mucho, cambia 'cover' por 'contain' */
+    object-fit: cover; 
 }
 
 .logo-text {
